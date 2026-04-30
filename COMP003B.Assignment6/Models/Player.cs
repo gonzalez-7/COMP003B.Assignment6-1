@@ -14,6 +14,8 @@ namespace COMP003B.Assignment6.Models
 
 		public int JerseyNumber { get; set; }
 
+		public int Age { get; set; }
+
 		public virtual ICollection<PlayerTeam>? PlayerTeams { get; set; }
 	}
 }

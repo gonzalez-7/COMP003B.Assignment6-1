@@ -40,6 +40,12 @@ namespace COMP003B.Assignment6.Controllers
                 return NotFound();
             }
 
+            ViewBag.Teams = from p in _context.Players
+                            join pt in _context.PlayerTeams on p.PlayerId equals pt.PlayerId
+                            join t in _context.Teams on pt.TeamId equals t.TeamId
+                            where p.PlayerId == id
+                            select t;
+
             return View(player);
         }
 

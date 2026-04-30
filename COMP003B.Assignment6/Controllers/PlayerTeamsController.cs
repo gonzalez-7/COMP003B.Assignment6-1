@@ -50,7 +50,7 @@ namespace COMP003B.Assignment6.Controllers
         public IActionResult Create()
         {
             ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "Name");
-            ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "City");
+            ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "TeamName");
             return View();
         }
 
@@ -68,7 +68,7 @@ namespace COMP003B.Assignment6.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "Name", playerTeam.PlayerId);
-            ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "City", playerTeam.TeamId);
+            ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "TeamName", playerTeam.TeamId);
             return View(playerTeam);
         }
 
@@ -86,7 +86,7 @@ namespace COMP003B.Assignment6.Controllers
                 return NotFound();
             }
             ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "Name", playerTeam.PlayerId);
-            ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "City", playerTeam.TeamId);
+            ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "TeamName", playerTeam.TeamId);
             return View(playerTeam);
         }
 
@@ -123,7 +123,7 @@ namespace COMP003B.Assignment6.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["PlayerId"] = new SelectList(_context.Players, "PlayerId", "Name", playerTeam.PlayerId);
-            ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "City", playerTeam.TeamId);
+            ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "TeamName", playerTeam.TeamId);
             return View(playerTeam);
         }
 

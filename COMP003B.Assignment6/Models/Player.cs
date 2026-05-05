@@ -7,10 +7,10 @@ namespace COMP003B.Assignment6.Models
 		public int PlayerId { get; set; }
 
 		[Required]
-		public string Name { get; set; } = string.Empty;
+		public string Name { get; set; }
 
 		[Required]
-		public string Position {  get; set; } = string.Empty;
+		public string Position {  get; set; }
 
 		public int JerseyNumber { get; set; }
 

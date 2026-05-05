@@ -8,7 +8,7 @@ namespace COMP003B.Assignment6.Data
 		public SoccerTeamContext(DbContextOptions<SoccerTeamContext> options) : base(options) { }
 
 		
-		//
+		
 		public DbSet<Player> Players { get; set; }
 		public DbSet<Team> Teams { get; set; }
 		public DbSet<PlayerTeam> PlayerTeams { get; set; }
